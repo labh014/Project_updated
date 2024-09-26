@@ -1,0 +1,216 @@
+
+body {
+    margin-left: 5px !important;
+    /* font-family: "Plus Jakarta Sans", sans-serif !important; */
+    font-optical-sizing: auto;
+    
+    /* background: linear-gradient(to right, #ffb86bc0, #56cbf2bd);  */
+        /* Or you can use a single color background */
+    margin: 0;
+    padding: 0;
+}
+
+.content-wrapper{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.box {
+    margin-top: 1rem !important;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+.navbar {
+    height: 4rem;
+    margin: auto;
+    /* background-color: #F7EEDD;
+     */
+     background-color: white;
+    /* background: linear-gradient(to right, #ff6b6b, #56ccf2); */
+    /* background: linear-gradient(to right, #ffffcc, #eeff009b); */
+
+}
+.navbar-collapse{
+    background-color: white;
+    width: auto;
+}
+/* .navbar-collapse .nav-link:hover{
+    background-color: aliceblue;
+} */
+.fa-compass {
+    color:  rgba(255, 51, 0, 0.893);
+    font-size: 2rem;
+}
+
+
+.nav-link {
+    color: black !important;
+}
+
+.info-links a {
+    text-decoration: none;
+    color: #222222;
+    margin-right: 1rem;
+}
+
+.info-links a:hover {
+    text-decoration: underline;
+}
+
+.info-links, .info-socialHandles, .info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+.info-socialHandles i {
+    font-size: 1.3rem;
+}
+
+.info-socialHandles i {
+    margin-right: 1rem;
+}
+.foot {
+    margin-top: 1rem;
+}
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f1f1f1;
+    height: 4rem;
+    text-align: center;
+}
+
+
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+    /* height: auto !important;
+    width: 220px !important; */
+    /* margin-left: 1rem;
+    margin-right: 1rem; */
+}
+
+.card-body {
+    padding: 0 !important;
+    /* display: flex; 
+    justify-content: center; 
+    align-items: center;  */
+}
+.card-img-top {
+    border-radius: 1em !important;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 400 !important;
+}
+
+.list-link {
+    text-decoration: none;
+    /* margin-right: 0.5rem; */
+}
+
+.card-img-overlay {
+    opacity: 0;
+    /* border-radius: 1em !important; */
+    border-top-left-radius: 1em !important; 
+    border-top-right-radius: 1em !important;
+
+}
+
+.card-img-overlay:hover{
+    opacity: 0.1;
+    background-color: black;
+}
+
+/* new Page */
+.add-btn{
+    background-color: rgba(255, 51, 0, 0.893) !important;
+    border: none !important;
+}
+
+/* edit Page */
+.edit-btn{
+    background-color: rgba(255, 51, 0, 0.893) !important;
+    border: none !important;
+}
+/* show page */
+.show-img {
+    height: 45vh;
+}
+
+.btns {
+    display: flex;
+    
+}
+
+/* .card  {
+    background: linear-gradient(to right, #ff6b6b, #56ccf2); */
+/* } */
+
+
+.company_name{
+    /* font-size: 70px; */
+  font-weight: 600;
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-color: #553c9a;
+}
+
+.signup{
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 51, 0, 0.893);
+    opacity: .8; 
+    color: white;
+    width: 76.54px;
+    display: flex !;
+    justify-content: center;
+}
+
+.signup:hover{
+    color: white !important;
+    box-shadow: 0 0 2px black;
+    background-color: rgba(255, 51, 0, 0.893);
+
+}
+
+.login{
+    border-radius: 10px;
+    margin-right: 10px;
+    color: rgba(255, 51, 0, 0.893) ;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 51, 0, 0.893);
+    opacity: .8; 
+    width: 76.54px;
+    display: flex;
+    justify-content: center;
+}
+
+.login:hover{
+    /* background-color: white !important; */
+    /* color:  rgba(255, 51, 0, 0.893) !important  ; */
+    color: white !important;
+    box-shadow: 0 0 2px black;
+    background-color: rgba(255, 51, 0, 0.893);
+}
+
+.tax-information{
+    display: none;
+}
+
+
+/* Map */
+#map{
+    height: 500px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+}

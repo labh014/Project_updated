@@ -1,0 +1,46 @@
+<style>
+    .post-login{
+        display: flex;
+        justify-content: center;
+    }
+    .post-login p:hover{
+        text-decoration: underline;
+    }
+</style>
+
+<% layout("/layouts/boilerplate") %>
+<div class="row mb-3">
+    <h1 class="col-6 offset-3">Sign up</h1>
+    <div class="col-6 offset-3 mt-4">
+        <form action="/signup" method="POST" novalidate class="needs-validation">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input class="form-control"  placeholder="Enter Username" name="user[username]" required>
+                <div class="valid-feedback">Looks Good</div>
+                <div class="invalid-feedback">Please enter a valid username </div>
+            </div>
+            <br>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input class="form-control"  placeholder="Enter Email" name="user[email]" required>
+                <div class="valid-feedback">Looks Good</div>
+                <div class="invalid-feedback">Please enter a valid Email Address </div>
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+            <input class="form-control"  placeholder="Enter Password" name="user[password]" required>
+                <!-- <div class="valid-feedback">Looks Good</div> -->
+                <div class="invalid-feedback">Please enter a valid Password </div>
+            </div>
+            <br>
+            <button class="btn btn-success add-btn">Sign Up</button>
+        </form>
+
+        <div class="mt-4 post-login">
+            <p >Already have an account?</p>
+            <span class="mx-2" ><a href="/login" style="text-decoration: none; color: black;"><b>Login</b></a></span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,180 @@
+<style>
+    .footer-info{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgba(128, 128, 128, 0.081);
+    }
+    .information{
+        width: 500px;
+        padding: 50px;
+    }
+    .icons-socialmedia{
+        display: flex;
+        gap: 1rem;
+    }
+    .recent-trip-image{
+        height: 90px !important;
+        width: 90px !important;
+        margin: 4px;
+        border-radius: 1rem;
+    }
+    .info-body-text {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    gap: 10px; /* Space between icon and text */
+    }
+
+    .info-body-text i {
+        font-size: 20px; /* Adjust icon size */
+    }
+
+    .info-body-text p {
+        margin: 0; /* Removes default margin from <p> */
+    }
+    .socialmedia-icon{
+        background-color: tomato;
+        height: 3rem; 
+        width: 3rem; 
+        border-radius: 1.5rem; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        cursor: pointer;
+        /* display: inline-block; */
+        transition: transform 0.5s ease-in-out;
+        font-size: 24px;
+        
+        }
+
+        .socialmedia-icon:hover {
+            transform: scale(1.2); /* Scale to 120% */
+        }
+
+    .footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+.information {
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and flex-basis */
+    margin: 10px;
+    min-width: 280px; /* Ensure a minimum width */
+}
+
+.icon img, .recent-trip-image {
+    width: 100%;
+    height: auto;
+}
+
+.icons-socialmedia {
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .information {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .icons-socialmedia {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+        .information {
+            flex: 1 1 45%;
+            max-width: 45%;
+        }
+}
+
+.social-media-anchor{
+    color: inherit;
+}
+
+
+</style>
+
+
+<footer class="foot mt-auto" style="position: relative; bottom:0; width:100vw; background-color: ;">
+    
+    
+    <div class="footer-info mt-4">
+        <div class="information">
+            <div class="heading mb-4"><b>Company's Info</b></div>
+            <div class="info-body">
+                A good plus of Travelling is that oftenyou getnew skills without difficulty and wihtout even noticing it
+            </div>
+            <div class="icon mt-5">
+                <img src="/images/45873.png" alt="" style="width: 90px; height: 90px; " >
+            </div>
+        </div>
+    
+        <div class="information">
+            <div class="heading mb-4"><b>Contacts</b></div>
+            <div class="info-body">
+                <div class="info-body-text  mb-2">
+                    <i class="fa-solid fa-mobile"></i>
+                    <p>01282-452-548</p>
+                </div>
+                <div class="info-body-text mb-2">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Dwarka Sec-8, New Delhi</p>
+                </div>
+                <div class="info-body-text mb-4">
+                    <i class="fa-solid fa-clock"></i>
+                    <p>Mon-Sat 9.00 AM - 7.00 PM</p>
+                </div>
+            </div>
+
+            <div class="icons-socialmedia">
+                <div class="socialmedia-icon mx-1">
+                    <a href="https://www.instagram.com/?utm_source=pwa_homescreen&__pwa=1" class="social-media-anchor"><i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                </div>
+                <div class="socialmedia-icon mx-1"><i class="fa-brands fa-facebook"></i></div>
+                <div class="socialmedia-icon mx-1">
+                    <a href="https://x.com/LABH014?t=Z0X3G6YdzIQTXNR-DIct6A&s=09" class="social-media-anchor">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="information">
+            <div class="heading mb-4"><b>Recent Trips</b></div>
+            <div class="trips-images-recent">
+                <img src="/images/trip.avif" alt="" class="recent-trip-image">
+                <img src="/images/trip2.avif" alt="" class="recent-trip-image">
+                <img src="/images/trip3.avif" alt="" class="recent-trip-image">
+                <img src="/images/trip4.avif" alt="" class="recent-trip-image">
+                <img src="/images/trip5.avif" alt="" class="recent-trip-image">
+                <img src="/images/trip6.avif" alt="" class="recent-trip-image">
+            </div>
+        </div>
+    </div>
+
+    <div class="info">
+        <div class="info-links">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+        </div>
+        <div class="info-brand">&copy; Travelling Private Limited</div>
+    </div>
+
+</footer>
