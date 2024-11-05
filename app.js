@@ -37,7 +37,6 @@ app.use(express.static(path.join(__dirname, "/public")));
 // const mongodbUrl = "mongodb://127.0.0.1:27017/Wanderlust";
 // const mongodbUrl = "mongodb+srv://labh551:JhkLePLfww5Nws1C@wanderlust-cluster.bmufi.mongodb.net/?retryWrites=true&w=majority&appName=wanderlust-cluster";
 const atlasDbUrl = process.env.ATLAS_DATABASE_URL;
-console.log(atlasDbUrl)
 main()
     .then(() => { console.log("Connection to Database is succesfull ") })
     .catch((err) => { console.log(err) });
