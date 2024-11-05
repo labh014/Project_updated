@@ -32,7 +32,7 @@ const listingSchema = new Schema({
             "Lake Front",
             "Castles"
         ],
-        required: true
+        // required: true
     },  
     reviews: 
         [

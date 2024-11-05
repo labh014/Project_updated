@@ -1,167 +1,192 @@
 <% layout("/layouts/boilerplate") %>
 
-    <style>
-        .filters{
-            margin-top: 0.5rem;
-        }
-        .filter{
-            display: flex;
-            flex-wrap: wrap;
-            
-        }
+  <style>
+    .filters {
+      margin-top: 0.5rem;
+    }
 
-        .filter a {
-            /* margin-right: 2rem; */
-            margin: 0 1rem 0 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            opacity: 0.8;
-        }
-        .filter a:hover{
-            opacity: 1;
-            cursor: pointer;
-        }
-        .filter a p{
-            font-size: 0.8rem;
-        }
-      
-        .tax-btn{
-            border: 1px solid aliceblue;
-            background-color: rgba(255, 51, 0, 0.893);
-            opacity: 0.8;
-            color: white;
-            height: 2.5rem;
-            border-radius: 1rem;
-            padding: 0.5rem;
-            /* margin-left: 30rem; */
-            margin-bottom: 1rem;
-        }
+    .filter {
+      display: flex;
+      flex-wrap: wrap;
 
-        .filter a {
-            text-decoration: none;
-            color: rgba(0, 0, 0, 0.795);
-            position: relative;
-            display: inline-block;
-            text-decoration: none;
-            color: inherit;
-            margin: 10px;
-            padding-bottom: 5px;
-        }
+    }
 
-        .filter a::after {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 0;
-          height: 2px;
-          background-color: currentColor;
-          transition: width 0.3s;
-        }
+    .filter a {
+      /* margin-right: 2rem; */
+      margin: 0 1rem 0 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0.8;
+    }
 
-        
-        .filter a:hover::after {
-          width: 100%;
-        }
+    .filter a:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
 
-        .filter a i {
-          margin-right: 8px;
-        }
+    .filter a p {
+      font-size: 0.8rem;
+    }
 
-        .listing-card {
-          transition: transform 0.3s, box-shadow 0.3s;
-        }
+    .tax-btn {
+      border: 1px solid aliceblue;
+      background-color: rgba(255, 51, 0, 0.893);
+      opacity: 0.8;
+      color: white;
+      height: 2.5rem;
+      border-radius: 1rem;
+      padding: 0.5rem;
+      /* margin-left: 30rem; */
+      margin-bottom: 1rem;
+    }
 
-        .listing-card:hover {
-          transform: translateY(-7px);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
-        }
+    .filter a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.795);
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+      margin: 10px;
+      padding-bottom: 5px;
+    }
 
-        .card-img-overlay {
-          pointer-events: none;
-        }
+    .filter a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      transition: width 0.3s;
+    }
 
-        .card-title {
-          font-size: 1.1rem;
-          color: #333;
-        }
 
-        .tax-information {
-          font-size: 0.9rem;
-          color: #888;
-        }
+    .filter a:hover::after {
+      width: 100%;
+    }
 
-        .card-body{
-          margin-left: 1rem;
-        }
-    </style>
+    .filter a i {
+      margin-right: 8px;
+    }
 
-    <!-- <h3>Explore!</h3><br> -->
-    <!-- <form method="GET" action="/listings/new" >
+    .listing-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .listing-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .card-img-overlay {
+      pointer-events: none;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .tax-information {
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .card-body {
+      margin-left: 1rem;
+    }
+  </style>
+
+  <!-- <h3>Explore!</h3><br> -->
+  <!-- <form method="GET" action="/listings/new" >
         <button>Create New list</button>
     </form> -->
 
-    <div class="filters">
-  <div class="filter">
-    <a href="/listings?category=Trending"><i class="fa-solid fa-fire"></i> <p>Trending</p></a>
-    <a href="/listings?category=Amazing Pools"><i class="fa-solid fa-water-ladder"></i> <p>Amazing Pools</p></a>
-    <a href="/listings?category=Mountains"><i class="fa-solid fa-mountain-sun"></i><p>Mountains</p></a>
-    <a href="/listings?category=Farms"><i class="fa-solid fa-tractor"></i><p>Farms</p></a>
-    <a href="/listings?category=Beaches"><i class="fa-solid fa-umbrella-beach"></i><p>Beaches</p></a>
-    <a href="/listings?category=Tree Houses"><i class="fa-solid fa-tree"></i><p>Tree Houses</p></a>
-    <a href="/listings?category=Top Cities"><i class="fa-solid fa-city"></i><p>Top Cities</p></a>
-    <a href="/listings?category=Lake Front"><i class="fa-solid fa-water"></i><p>Lake Front</p></a>
-    <a href="/listings?category=Castles"><i class="fa-solid fa-chess-rook"></i><p>Castles</p></a>
+  <div class="filters">
+    <div class="filter">
+      <a href="/listings?category=Trending"><i class="fa-solid fa-fire"></i>
+        <p>Trending</p>
+      </a>
+      <a href="/listings?category=Amazing Pools"><i class="fa-solid fa-water-ladder"></i>
+        <p>Amazing Pools</p>
+      </a>
+      <a href="/listings?category=Mountains"><i class="fa-solid fa-mountain-sun"></i>
+        <p>Mountains</p>
+      </a>
+      <a href="/listings?category=Farms"><i class="fa-solid fa-tractor"></i>
+        <p>Farms</p>
+      </a>
+      <a href="/listings?category=Beaches"><i class="fa-solid fa-umbrella-beach"></i>
+        <p>Beaches</p>
+      </a>
+      <a href="/listings?category=Tree Houses"><i class="fa-solid fa-tree"></i>
+        <p>Tree Houses</p>
+      </a>
+      <a href="/listings?category=Top Cities"><i class="fa-solid fa-city"></i>
+        <p>Top Cities</p>
+      </a>
+      <a href="/listings?category=Lake Front"><i class="fa-solid fa-water"></i>
+        <p>Lake Front</p>
+      </a>
+      <a href="/listings?category=Castles"><i class="fa-solid fa-chess-rook"></i>
+        <p>Castles</p>
+      </a>
 
-    <div class="tax-btn ms-auto">
-      <div class="form-check-reverse form-switch">
-        <label class="form-check-label" for="flexSwitchCheckDefault">Tax Include</label>
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+      <div class="tax-btn ms-auto">
+        <div class="form-check-reverse form-switch">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Tax Include</label>
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div id="results" class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 flexing" style="border-radius: 1em;">
-  <% for(listing of selectedListings){ %>
-    <div class="card-boxes mb-4">
-      <a href="/listings/<%= listing._id %>" class="list-link text-decoration-none text-dark">
-        <div class="card listing-card h-100 shadow-sm">
-          <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_img" style="height: 18rem; object-fit: cover;"/>
-          <div class="card-img-overlay d-flex justify-content-end align-items-start p-2">
-            <span class="badge bg-primary">New</span>
+  <div id="results" class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 flexing" style="border-radius: 1em;">
+    <% for(listing of selectedListings){ %>
+      <div class="card-boxes mb-4">
+        <a href="/listings/<%= listing._id %>" class="list-link text-decoration-none text-dark">
+          <div class="card listing-card h-100 shadow-sm">
+            <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_img"
+              style="height: 18rem; object-fit: cover;" />
+            <div class="card-img-overlay d-flex justify-content-end align-items-start p-2">
+              <span class="badge bg-primary">New</span>
+            </div>
+            <div class="card-body">
+              <% const taxRate=0.18; const taxAmount=listing.price * taxRate; const finalAmount=listing.price + taxAmount; %>
+                <p class="card-title"><b>
+                    <%= listing.title %>
+                  </b> <br>
+                  &#8377;<%= listing.price.toLocaleString("en-IN") %>/day
+                    <b class="tax-information text-muted"> &nbsp; &nbsp;Final Amount : <i><%= finalAmount.toFixed(2) %></i></b>
+                </p>
+            </div>
           </div>
-          <div class="card-body">
-            <p class="card-title"><b><%= listing.title %></b> <br>
-            &#8377;<%= listing.price.toLocaleString("en-IN") %>/day
-            <b class="tax-information text-muted"> &nbsp; &nbsp; <i>x% GST</i></b>
-            </p>
-          </div>
-        </div>
-      </a>
-    </div>
-  <% } %>
-</div>
+        </a>
+      </div>
+      <% } %>
+  </div>
 
 
-    
-    <script src="/js/differ.js">
-        // let taxButton = document.getElementById("flexSwitchCheckDefault");
-        // taxButton.addEventListener("click", () => {
-        //     let taxInformation = document.getElementsByClassName("tax-information");
-        //     // console.log(taxInformation);
-        //     for(info of taxInformation){
-        //         if(info.style.display != "inline"){
-        //             info.style.display = "inline";
-        //         }
-        //         else info.style.display = "none";
-        //         // console.log(info);
-        //     }
 
-        // }) 
-    </script>
-    
-    <!-- <ul>
+  <script src="/js/differ.js">
+    // let taxButton = document.getElementById("flexSwitchCheckDefault");
+    // taxButton.addEventListener("click", () => {
+    //     let taxInformation = document.getElementsByClassName("tax-information");
+    //     // console.log(taxInformation);
+    //     for(info of taxInformation){
+    //         if(info.style.display != "inline"){
+    //             info.style.display = "inline";
+    //         }
+    //         else info.style.display = "none";
+    //         // console.log(info);
+    //     }
+
+    // }) 
+  </script>
+
+  <!-- <ul>
         <% for(listing of allListings){ %>
             <li>
                 <a href="/listings/<%= listing._id %>"><%= listing.title %></a>
